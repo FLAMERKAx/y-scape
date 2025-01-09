@@ -1,15 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfkdg5b725mk6"]
+[gd_scene load_steps=5 format=3 uid="uid://cfkdg5b725mk6"]
 
-[sub_resource type="Environment" id="Environment_oot4q"]
-background_mode = 1
-background_color = Color(0.954322, 0.945469, 0.985697, 1)
-fog_enabled = true
-fog_sky_affect = 0.275
+[ext_resource type="PackedScene" uid="uid://dlsww6ru43hv2" path="res://block.tscn" id="1_mku11"]
+[ext_resource type="PackedScene" uid="uid://uopxifleikul" path="res://steve.tscn" id="2_gk05h"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_r4yrb"]
+size = Vector3(10, 0.5, 10)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_oot4q")
+[sub_resource type="BoxMesh" id="BoxMesh_l66yp"]
+size = Vector3(10, 0.5, 10)
+
+[node name="Level1" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_r4yrb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("BoxMesh_l66yp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-3.09086e-08, 0.707107, -0.707107, 3.09086e-08, 0.707107, 0.707107, 1, 0, -4.37114e-08, -4.02503, 4.59333, 0)
+shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4308, 0)
+transform = Transform3D(1, 1.13133e-08, 1.48943e-09, -1.13133e-08, 0.965926, 0.258819, 1.48943e-09, -0.258819, 0.965926, 0, 3, 5)
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="Block1" parent="Blocks" instance=ExtResource("1_mku11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.89445, 0)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_mku11")]
+transform = Transform3D(0.877983, -0.372691, -0.300412, 0, 0.627569, -0.778561, 0.478692, 0.683563, 0.550995, 0, 7.36315, 0)
+
+[node name="Steve" parent="." instance=ExtResource("2_gk05h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36098, 1.63538, 2.14899)
