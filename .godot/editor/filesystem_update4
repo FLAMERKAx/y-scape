@@ -1,4 +1,5 @@
 res://node_3d.tscn
-res://block.tscn
-res://steve.tscn
+res://icon.gd
 res://steve.gd
+res://steve.tscn
+res://block.tscn

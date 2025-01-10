@@ -1,4 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736432112
-icon.svg::CompressedTexture2D::625948959749090257::1736342660::1736366491::1::::<><>::
-node_3d.tscn::PackedScene::5144623807595207299::1736366397::0::1::::<><>::
+::res://::1736506387
+block.tscn::PackedScene::7969874847411606385::1736433035::0::1::::<><>::
+icon.gd::GDScript::-1::1736504668::0::1::::<>Sprite3D<>::
+icon.svg::CompressedTexture2D::625948959749090257::1736342660::1736503140::1::::<><>::
+node_3d.tscn::PackedScene::5144623807595207299::1736505228::0::1::::<><>::uid://dlsww6ru43hv2::::res://block.tscn<>uid://uopxifleikul::::res://steve.tscn<>uid://i6hj13g5dscn::::res://icon.svg<>res://icon.gd
+steve.gd::GDScript::-1::1736435396::0::1::::<>CharacterBody3D<>::
+steve.tscn::PackedScene::1433630417885079035::1736504686::0::1::::<><>::res://steve.gd
