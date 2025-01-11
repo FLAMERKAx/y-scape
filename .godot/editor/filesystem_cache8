@@ -1,10 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736595825
+::res://::1736604618
 icon.svg::CompressedTexture2D::625948959749090257::1736342407::1736589495::1::::<><>::
-level_1.tscn::PackedScene::8326340928219364231::1736595233::0::1::::<><>::uid://bm67a6nox7k5s::::res://block.tscn<>uid://d4kungvbnj7gw::::res://steve.tscn
+level_1.tscn::PackedScene::8326340928219364231::1736601587::0::1::::<><>::uid://bm67a6nox7k5s::::res://block.tscn<>uid://d4kungvbnj7gw::::res://steve.tscn<>uid://csq4rgyj0ry4b::::res://Screenshot_2 (2).png<>res://sprite_3d.gd<>uid://boqnolug2ubii::::res://coin.tscn
 many_spheres.tscn::PackedScene::3494101661813823041::1736594349::0::1::::<><>::uid://bgb331ommr5l::::res://sphere.tscn
 block.tscn::PackedScene::3294627110468283430::1736594627::0::1::::<><>::
+coin.tscn::PackedScene::3402909469673564460::1736601589::0::1::::<><>::res://coin.gd
+coin.gd::GDScript::-1::1736601529::0::1::::<>Area3D<>::
+sprite_3d.gd::GDScript::-1::1736599255::0::1::::<>Sprite3D<>::
 Screenshot_2 (2).png::CompressedTexture2D::6071062100880783091::1734034294::1736595835::1::::<><>::
-steve.gd::GDScript::-1::1736595070::0::1::::<>CharacterBody3D<>::
-steve.tscn::PackedScene::9216620196943125338::1736595235::0::1::::<><>::res://steve.gd
+steve.gd::GDScript::-1::1736598068::0::1::::<>CharacterBody3D<>::
+steve.tscn::PackedScene::9216620196943125338::1736601588::0::1::::<><>::res://steve.gd
 sphere.tscn::PackedScene::82687340855837739::1736594349::0::1::::<><>::
+::res://Assets/::1736604670
+::res://Assets/Models/::1736604809
+coin.glb::PackedScene::6322729161269525850::1736604721::1736604809::1::::<><>::uid://db8x3tenquo1f::::res://Assets/Models/coin_upper.png<>uid://c4pr1fn61346h::::res://Assets/Models/coin_lower.png
+coin_upper.png::CompressedTexture2D::7299022858399989361::1736604803::1736604810::1::::<><>::
+coin_lower.png::CompressedTexture2D::6840362402862181177::1736604805::1736604810::1::::<><>::
