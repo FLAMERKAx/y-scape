@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqvlvbdhu8qc2"]
+[gd_scene load_steps=10 format=3 uid="uid://dqvlvbdhu8qc2"]
 
 [ext_resource type="PackedScene" uid="uid://bm67a6nox7k5s" path="res://block.tscn" id="1_5st7f"]
 [ext_resource type="PackedScene" uid="uid://d4kungvbnj7gw" path="res://steve.tscn" id="2_the0a"]
 [ext_resource type="Texture2D" uid="uid://csq4rgyj0ry4b" path="res://Screenshot_2 (2).png" id="3_rwwao"]
 [ext_resource type="Script" path="res://sprite_3d.gd" id="4_4h1bf"]
 [ext_resource type="PackedScene" uid="uid://boqnolug2ubii" path="res://coin.tscn" id="5_8tp0k"]
+[ext_resource type="Environment" uid="uid://ded502qbifc68" path="res://Resources/level_1_env.tres" id="6_ml58o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5m1on"]
+albedo_color = Color(0.3632, 0.176, 0.8, 1)
+roughness = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_erlfb"]
+material = SubResource("StandardMaterial3D_5m1on")
 size = Vector2(10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_id1es"]
@@ -56,3 +62,6 @@ script = ExtResource("4_4h1bf")
 
 [node name="Coin" parent="." instance=ExtResource("5_8tp0k")]
 transform = Transform3D(0.74128, 0.578207, 0.340853, -0.217632, -0.273337, 0.936976, 0.634933, -0.768742, -0.0767831, -0.680362, 1.4629, 2.66609)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("6_ml58o")
