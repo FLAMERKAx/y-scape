@@ -1,15 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfkdg5b725mk6"]
-
-[sub_resource type="Environment" id="Environment_oot4q"]
-background_mode = 1
-background_color = Color(0.954322, 0.945469, 0.985697, 1)
-fog_enabled = true
-fog_sky_affect = 0.275
+[gd_scene format=3 uid="uid://cfkdg5b725mk6"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_oot4q")
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4308, 0)
+transform = Transform3D(1, 0, 0, 0, 0.973734, 0.227688, 0, -0.227688, 0.973734, 0, 1.4308, 3.28055)
+fov = 69.6956
