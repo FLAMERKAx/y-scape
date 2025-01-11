@@ -1,2 +1,7 @@
+MeshInstance3D
+CollisionShape3D
+RigidBody3D
+StaticBody3D
+SpotLight3D
 Camera3D
 WorldEnvironment

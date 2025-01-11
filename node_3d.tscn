@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://cfkdg5b725mk6"]
-
-[node name="Node3D" type="Node3D"]
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.973734, 0.227688, 0, -0.227688, 0.973734, 0, 1.4308, 3.28055)
-fov = 69.6956
