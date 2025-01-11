@@ -6,3 +6,5 @@ res://block.tscn
 res://steve.tscn
 res://sprite_3d.gd
 res://steve.gd
+res://coin.tscn
+res://coin.gd
