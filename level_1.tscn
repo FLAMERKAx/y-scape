@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqvlvbdhu8qc2"]
+[gd_scene load_steps=5 format=3 uid="uid://dqvlvbdhu8qc2"]
 
-[ext_resource type="PackedScene" uid="uid://bgb331ommr5l" path="res://sphere.tscn" id="1_2hfou"]
+[ext_resource type="PackedScene" uid="uid://bm67a6nox7k5s" path="res://block.tscn" id="1_5st7f"]
+[ext_resource type="PackedScene" uid="uid://d4kungvbnj7gw" path="res://steve.tscn" id="2_the0a"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_erlfb"]
 size = Vector2(10, 10)
@@ -31,11 +32,16 @@ shadow_enabled = true
 spot_range = 22.2348
 spot_angle = 53.2964
 
-[node name="Sphere" parent="." instance=ExtResource("1_2hfou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.83667, 0)
+[node name="Blocks" type="Node3D" parent="."]
 
-[node name="Sphere2" parent="." instance=ExtResource("1_2hfou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.781081, 4.69129, 0)
+[node name="Block" parent="Blocks" instance=ExtResource("1_5st7f")]
+transform = Transform3D(0.95299, -0.303002, 0, 0.293329, 0.922568, 0.25065, -0.0759476, -0.238867, 0.968078, 0, 3.47795, 0)
 
-[node name="Sphere3" parent="." instance=ExtResource("1_2hfou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.854642, 2.96112, 0)
+[node name="Block2" parent="Blocks" instance=ExtResource("1_5st7f")]
+transform = Transform3D(0.74888, 0.627357, 0.213548, -0.539053, 0.389215, 0.746949, 0.385488, -0.674489, 0.629654, 1.35623, 4.43766, 0)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_5st7f")]
+transform = Transform3D(0.829035, -0.555902, 0.0606056, 0.555474, 0.806182, -0.203765, 0.0644143, 0.202593, 0.977142, -1.51056, 4.87618, 0.167282)
+
+[node name="Steve" parent="." instance=ExtResource("2_the0a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

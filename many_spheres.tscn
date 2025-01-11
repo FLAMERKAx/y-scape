@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp1tlxrxeb7rx"]
+
+[ext_resource type="PackedScene" uid="uid://bgb331ommr5l" path="res://sphere.tscn" id="1_ltvu4"]
+
+[node name="ManySpheres" type="Node3D"]
+
+[node name="Sphere" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
+
+[node name="Sphere2" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0.532139, 0.308924, 0)
+
+[node name="Sphere3" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0.163011, 0.606823, 0)
+
+[node name="Sphere4" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0.624155)
+
+[node name="Sphere5" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0.170238, 0.324239, 0.420662)
+
+[node name="Sphere6" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0.41462, -0.369068)
+
+[node name="Sphere7" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0.409476, 0, -0.259913)
+
+[node name="Sphere8" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -0.17897, 0, -0.410034)
+
+[node name="Sphere9" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -0.416702, 0, 0.186917)
+
+[node name="Sphere10" parent="." instance=ExtResource("1_ltvu4")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -0.154093, 0.372984, 0.179177)
