@@ -19,3 +19,12 @@ mesh = SubResource("SphereMesh_lavx8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_cc0ss")
+
+[node name="Camera_Controller" type="Node3D" parent="."]
+top_level = true
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Controller"]
+transform = Transform3D(1, 0, 0, 0, 0.958263, 0.285889, 0, -0.285889, 0.958263, 0, 2.1602, 3.11723)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target"]
+current = true

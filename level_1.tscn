@@ -20,10 +20,6 @@ size = Vector3(10, 0.1, 10)
 
 [node name="Level1" type="Node3D"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.810982, 0.585071, 0, -0.585071, 0.810982, 0, 3.74182, 5.6853)
-fov = 93.5663
-
 [node name="Floor" type="StaticBody3D" parent="."]
 metadata/_edit_group_ = true
 
@@ -60,8 +56,11 @@ transform = Transform3D(3.215, 0, 0, 0, 3.215, 0, 0, 0, 3.215, 0, 4.56227, -27.9
 texture = ExtResource("3_rwwao")
 script = ExtResource("4_4h1bf")
 
-[node name="Coin" parent="." instance=ExtResource("5_8tp0k")]
-transform = Transform3D(0.74128, 0.578207, 0.340853, -0.217632, -0.273337, 0.936976, 0.634933, -0.768742, -0.0767831, -0.680362, 1.4629, 2.66609)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_ml58o")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19968, 7.44524)
+
+[node name="Coin" parent="." instance=ExtResource("5_8tp0k")]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 1.56217, 2.70003)
