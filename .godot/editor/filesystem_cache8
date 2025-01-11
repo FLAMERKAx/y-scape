@@ -1,4 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736589493
+::res://::1736595825
 icon.svg::CompressedTexture2D::625948959749090257::1736342407::1736589495::1::::<><>::
-node_3d.tscn::PackedScene::5144623807595207299::1736443435::0::1::::<><>::
+level_1.tscn::PackedScene::8326340928219364231::1736595233::0::1::::<><>::uid://bm67a6nox7k5s::::res://block.tscn<>uid://d4kungvbnj7gw::::res://steve.tscn
+many_spheres.tscn::PackedScene::3494101661813823041::1736594349::0::1::::<><>::uid://bgb331ommr5l::::res://sphere.tscn
+block.tscn::PackedScene::3294627110468283430::1736594627::0::1::::<><>::
+Screenshot_2 (2).png::CompressedTexture2D::6071062100880783091::1734034294::1736595835::1::::<><>::
+steve.gd::GDScript::-1::1736595070::0::1::::<>CharacterBody3D<>::
+steve.tscn::PackedScene::9216620196943125338::1736595235::0::1::::<><>::res://steve.gd
+sphere.tscn::PackedScene::82687340855837739::1736594349::0::1::::<><>::
