@@ -2,14 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn6wf48xs3qxg"
+uid="uid://byid8xpipcisq"
 path.s3tc="res://.godot/imported/world_blocks_Snow007A_1K-JPG_Roughness.png-d867dfbba91f5c088791ffd7611c7cf3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e1115539f7ac841dba95b5095c8078fd"
+"md5": "36f80f1e835115bb891e8d726539a303"
 }
 
 [deps]

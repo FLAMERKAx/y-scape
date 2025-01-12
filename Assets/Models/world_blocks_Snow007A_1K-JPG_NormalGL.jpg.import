@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhy7vf0yc0s4"
+uid="uid://dk2mp2uxj76yt"
 path.s3tc="res://.godot/imported/world_blocks_Snow007A_1K-JPG_NormalGL.jpg-96c65547102bb6a39c4d061b02aaf133.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -27,8 +27,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Assets/Models/world_blocks_Snow007A_1K-JPG_NormalGL.jpg"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
