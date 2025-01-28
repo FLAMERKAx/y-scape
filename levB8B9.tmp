@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqvlvbdhu8qc2"]
+
+[ext_resource type="PackedScene" uid="uid://bm67a6nox7k5s" path="res://block.tscn" id="1_5st7f"]
+[ext_resource type="PackedScene" uid="uid://6u2m3uw14be1" path="res://ykri.tscn" id="3_ein6s"]
+[ext_resource type="Environment" uid="uid://ded502qbifc68" path="res://Resources/level_1_env.tres" id="6_ml58o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5m1on"]
+albedo_color = Color(0.3632, 0.176, 0.8, 1)
+roughness = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_erlfb"]
+material = SubResource("StandardMaterial3D_5m1on")
+size = Vector2(100, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_id1es"]
+size = Vector3(100, 0.1, 100)
+
+[node name="Level1" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("PlaneMesh_erlfb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0497129, 0)
+shape = SubResource("BoxShape3D_id1es")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.871162, 0.490995, 0, -0.490995, 0.871162, 0, 6.85211, 9.08335)
+light_energy = 12.798
+shadow_enabled = true
+spot_range = 22.2348
+spot_angle = 53.2964
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("1_5st7f")]
+transform = Transform3D(0.95299, -0.303002, 0, 0.293329, 0.922568, 0.25065, -0.0759476, -0.238867, 0.968078, 0, 3.47795, 0)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_5st7f")]
+transform = Transform3D(0.74888, 0.627357, 0.213548, -0.539053, 0.389215, 0.746949, 0.385488, -0.674489, 0.629654, 1.35623, 4.43766, 0)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_5st7f")]
+transform = Transform3D(0.829035, -0.555902, 0.0606056, 0.555474, 0.806182, -0.203765, 0.0644143, 0.202593, 0.977142, -1.51056, 4.87618, 0.167282)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("6_ml58o")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19968, 7.44524)
+
+[node name="ykri_bake" parent="." instance=ExtResource("3_ein6s")]
+transform = Transform3D(1, -2.2972e-05, -3.26907e-05, 2.2972e-05, 1, -7.75825e-05, 3.26907e-05, 7.75825e-05, 1, 0, 0, 3.08126)
+blend_speed = 15

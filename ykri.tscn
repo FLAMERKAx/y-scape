@@ -1,0 +1,97 @@
+[gd_scene load_steps=12 format=3 uid="uid://6u2m3uw14be1"]
+
+[ext_resource type="PackedScene" uid="uid://bkwxgal3nfmn6" path="res://Assets/Models/ykri/ykri_bake.glb" id="1_pf26h"]
+[ext_resource type="Script" path="res://ykri.gd" id="2_nlc6r"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tn4xa"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6h4in"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qiede"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hr3bg"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ch7uo"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_yflqx"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_e4yxb"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_lv2ly"]
+graph_offset = Vector2(-569.582, -40.1684)
+nodes/a_idle/node = SubResource("AnimationNodeAnimation_tn4xa")
+nodes/a_idle/position = Vector2(-420, 0)
+nodes/a_jump/node = SubResource("AnimationNodeAnimation_6h4in")
+nodes/a_jump/position = Vector2(-60, 260)
+nodes/a_run/node = SubResource("AnimationNodeAnimation_qiede")
+nodes/a_run/position = Vector2(-240, 260)
+nodes/a_walk/node = SubResource("AnimationNodeAnimation_hr3bg")
+nodes/a_walk/position = Vector2(-420, 260)
+nodes/jump/node = SubResource("AnimationNodeBlend2_ch7uo")
+nodes/jump/position = Vector2(100, -60)
+nodes/output/position = Vector2(280, 100)
+nodes/run/node = SubResource("AnimationNodeBlend2_yflqx")
+nodes/run/position = Vector2(-60, -60)
+nodes/walk/node = SubResource("AnimationNodeBlend2_e4yxb")
+nodes/walk/position = Vector2(-220, -60)
+node_connections = [&"jump", 0, &"run", &"jump", 1, &"a_jump", &"output", 0, &"jump", &"run", 0, &"walk", &"run", 1, &"a_run", &"walk", 0, &"a_idle", &"walk", 1, &"a_walk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_slqvj"]
+radius = 0.268
+height = 1.75116
+
+[node name="ykri_bake" instance=ExtResource("1_pf26h")]
+script = ExtResource("2_nlc6r")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+bones/0/position = Vector3(-0.000692092, 0.950042, -0.0310754)
+bones/0/rotation = Quaternion(-0.00695423, 0.00111378, -0.00189979, 0.999973)
+bones/1/rotation = Quaternion(0.0476845, -0.00763348, -0.0170067, 0.998689)
+bones/2/position = Vector3(0.108209, 0.427267, 0.0154039)
+bones/2/rotation = Quaternion(0.00401391, 0.0236184, -0.986142, 0.164168)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(0.10799, -0.0527915, -0.00251025, 0.992746)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/rotation = Quaternion(0.0134774, 0.00807268, -0.0265008, 0.999525)
+bones/5/position = Vector3(0.0736936, -0.0136056, -0.0127433)
+bones/5/rotation = Quaternion(0.0240521, 0.027915, 0.9993, 0.00652274)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(-0.0955189, 0.105547, 0.0171715, 0.989667)
+bones/7/rotation = Quaternion(0.655796, -0.0863029, 0.0533768, 0.748087)
+bones/8/position = Vector3(-0.108209, 0.427267, 0.0154039)
+bones/8/rotation = Quaternion(0.00265386, -0.0184492, 0.981914, 0.18841)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/rotation = Quaternion(0.109456, 0.0558244, 0.0201269, 0.992219)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(-0.0194871, -0.0138092, 0.0771423, 0.996734)
+bones/11/position = Vector3(-0.0716396, -0.013586, -0.0127518)
+bones/11/rotation = Quaternion(-0.0255222, 0.0245278, 0.999327, -0.00966509)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/rotation = Quaternion(-0.0886377, -0.118564, -0.0160155, 0.988853)
+bones/13/rotation = Quaternion(0.651986, 0.0980056, -0.0634512, 0.749188)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeBlendTree_lv2ly")
+anim_player = NodePath("../AnimationPlayer")
+parameters/jump/blend_amount = 0.0
+parameters/run/blend_amount = 0
+parameters/walk/blend_amount = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.878018, 0)
+shape = SubResource("CapsuleShape3D_slqvj")
+
+[node name="SpringArmPivot" type="Node3D" parent="." index="4"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="SpringArmPivot" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39593, 0)
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArmPivot/SpringArm3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.975234, 0.221174, 0, -0.221174, 0.975234, 0, 0.180582, 0)
+current = true

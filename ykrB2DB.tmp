@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://6u2m3uw14be1"]
+
+[ext_resource type="PackedScene" uid="uid://bkwxgal3nfmn6" path="res://Assets/Models/ykri/ykri_bake.glb" id="1_pf26h"]
+[ext_resource type="Script" path="res://ykri.gd" id="2_nlc6r"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_slqvj"]
+radius = 0.268
+height = 1.75116
+
+[node name="ykri_bake" instance=ExtResource("1_pf26h")]
+script = ExtResource("2_nlc6r")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+bones/0/position = Vector3(-3.63164e-19, 0.952215, -0.0310754)
+bones/0/rotation = Quaternion(-0.00814734, 0.00172651, -0.00176438, 0.999964)
+bones/1/rotation = Quaternion(0.0491759, -0.00999072, -0.0254252, 0.998416)
+bones/2/position = Vector3(0.108209, 0.427267, 0.0154039)
+bones/2/rotation = Quaternion(0.00439199, 0.0240335, -0.988301, 0.15055)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(0.107954, -0.0559515, -0.0153515, 0.992461)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/rotation = Quaternion(0.0147889, 0.00588868, -0.0416925, 0.999004)
+bones/5/position = Vector3(0.0747809, -0.0136006, -0.0127455)
+bones/5/rotation = Quaternion(0.0245475, 0.0142863, 0.999592, 0.00318422)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(-0.0666432, 0.0894876, 0.0107617, 0.993698)
+bones/7/rotation = Quaternion(0.643614, -0.0777414, 0.0554148, 0.759372)
+bones/8/position = Vector3(-0.108209, 0.427267, 0.0154039)
+bones/8/rotation = Quaternion(0.00239979, -0.0175755, 0.983705, 0.178911)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/rotation = Quaternion(0.107198, 0.0577074, 0.0290513, 0.992136)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(-0.0255829, -0.00928524, 0.115529, 0.992931)
+bones/11/position = Vector3(-0.0747809, -0.0136005, -0.0127455)
+bones/11/rotation = Quaternion(-0.0251028, 0.00957245, 0.999619, -0.00633116)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/rotation = Quaternion(-0.0570505, -0.110376, -0.00900075, 0.99221)
+bones/13/rotation = Quaternion(0.6383, 0.0945934, -0.0694705, 0.760788)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.878018, 0)
+shape = SubResource("CapsuleShape3D_slqvj")
+
+[node name="SpringArmPivot" type="Node3D" parent="." index="3"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="SpringArmPivot" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39593, 0)
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArmPivot/SpringArm3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.975234, 0.221174, 0, -0.221174, 0.975234, 0, 0.180582, 0)
+current = true
