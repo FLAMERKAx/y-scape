@@ -15,6 +15,14 @@ run/main_scene="res://node_3d.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=240
+window/size/mode=3
+window/size/borderless=true
+window/stretch/mode="viewport"
+
 [input]
 
 forward={
@@ -53,7 +61,10 @@ run={
 ]
 }
 
+[physics]
+
+3d/default_gravity=20.0
+
 [rendering]
 
-renderer/rendering_method="mobile"
 anti_aliasing/quality/msaa_3d=1

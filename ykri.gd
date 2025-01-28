@@ -17,7 +17,7 @@ var jump_val = 0
 var speed = 5.0
 
 const RUN_SPEED = 2
-const JUMP_VELOCITY = 6.0
+const JUMP_VELOCITY = 9.0
 const LERP_VAL = 0.15
 
 func handle_animations(delta):

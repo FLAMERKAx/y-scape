@@ -1,8 +1,10 @@
 res://level_1.tscn
-res://Resources/level_1_env.tres
+res://Resources/world_blocks.tres
 res://Assets/Models/coin_mesh.res
+res://Resources/level_1_env.tres
 res://steve.tscn
 res://coin.tscn
 res://block.tscn
 res://ykri.tscn
-res://Resources/world_blocks.tres
+res://world_blocks.tscn
+res://level_1.gd
